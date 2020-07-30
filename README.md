@@ -2,7 +2,7 @@
   <h3>Your personal time manager</h3>
   <br>v 1.0
 <p align="center">
-  <img src="screenshots/1.png" width="300" alt="Start page">
+  <img src="screenshots/1.png" width="250" alt="Start page">
 </p>
 <hr>
 <h4><strong>Над проектом работали: </strong></h4>
@@ -65,21 +65,21 @@
 
 
 <p align="center">
-  <img src="screenshots/2.png" width="250" alt="Register page">
+  <img src="screenshots/2.png" width="150" alt="Register page">
 </p>
 
 <p align="center">
-  <img src="screenshots/main.png" width="250" alt="Main">
+  <img src="screenshots/main.png" width="150" alt="Main">
 </p>
 <p align="center">
-  <img src="screenshots/pomodoro.png" width="250" alt="Pomodoro">
+  <img src="screenshots/podomoro.png" width="150" alt="Pomodoro">
 </p>
 <p align="center">
-  <img src="screenshots/135.png" width="250" alt="1-3-5">
+  <img src="screenshots/135.png" width="150" alt="1-3-5">
 </p>
 
 <p align="center">
-  <img src="screenshots/calendar.png" width="250" alt="Calendar">
+  <img src="screenshots/calendar.png" width="150" alt="Calendar">
 </p>
 
 <h4> Спасибо, что посмотрели наше приложение! Хорошего дня! =) </h4>
