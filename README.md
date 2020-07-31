@@ -46,7 +46,7 @@
 <h4> React Native </h4>
 <h4> Firebase </h4>
 <h4> Expo </h4>
-<h4> Weater Api </h4>
+<h4> Weather API </h4>
 
 <hr>
 <h4> <strong> Как запустить ? </strong></h4>
@@ -62,7 +62,6 @@
 
 <hr>
 <h4> <strong> Скриншоты Jobble </strong></h4>
-
 
 <p align="center">
   <img src="screenshots/2.png" width="150" alt="Register page">
@@ -83,4 +82,3 @@
 </p>
 
 <h4> Спасибо, что посмотрели наше приложение! Хорошего дня! =) </h4>
-

@@ -9,7 +9,7 @@ export default function Weather() {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://api.weatherstack.com/current?access_key=b300c02a4f9acdf54ef72820e127326a&query=Saint_Petersbug"
+        "http://api.weatherstack.com/current?access_key=process.env.WHEATHER_API_KEY&query=Saint_Petersbug"
       );
       const result = await response.json();
       setTemperature(result.current.temperature);

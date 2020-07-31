@@ -12,19 +12,22 @@ import * as firebase from "firebase";
 
 export default LoginScreen = (props) => {
   initialState = { email: "", password: "", errorMessage: null };
-  const [state, setState] = useState(initialState)
+  const [state, setState] = useState(initialState);
   const handleLogin = () => {
     const { email, password } = state;
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch((err) => {
-        setState({...state, errorMessage: err.message });
+        setState({ ...state, errorMessage: err.message });
       });
   };
 
   return (
-    <ImageBackground source={require('../123125.jpg')} style={styles.container}>
+    <ImageBackground
+      source={require("../assets/123125.jpg")}
+      style={styles.container}
+    >
       <View style={styles.container}>
         <Text style={styles.greeting}>F-TIME </Text>
         <Text style={styles.greeting}>CHANGE YOUR LIFE </Text>
@@ -39,7 +42,7 @@ export default LoginScreen = (props) => {
             <TextInput
               style={styles.input}
               autoCapitalize="none"
-              onChangeText={(email) => setState({...state, email })}
+              onChangeText={(email) => setState({ ...state, email })}
               value={state.email}
             ></TextInput>
           </View>
@@ -49,7 +52,7 @@ export default LoginScreen = (props) => {
               style={styles.input}
               secureTextEntry
               autoCapitalize="none"
-              onChangeText={(password) => setState({...state, password })}
+              onChangeText={(password) => setState({ ...state, password })}
               value={state.password}
             ></TextInput>
           </View>
@@ -62,14 +65,13 @@ export default LoginScreen = (props) => {
           onPress={() => props.navigation.navigate("Register")}
         >
           <Text style={{ color: "black", fontSize: 13 }}>
-            New to f-time?{" "}
-            <Text style={{ color: "#e98a2f" }}>Sign Up</Text>
+            New to f-time? <Text style={{ color: "#e98a2f" }}>Sign Up</Text>
           </Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "400",
     textAlign: "center",
-    color: "#e98a2f"
+    color: "#e98a2f",
   },
   errorMessage: {
     height: 72,

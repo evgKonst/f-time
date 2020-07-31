@@ -1,17 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   TextInput,
   TouchableOpacity,
-  ImageBackground} from "react-native";
+  ImageBackground,
+} from "react-native";
 
 import * as firebase from "firebase";
 
 export default RegisterScreen = (props) => {
-  initialState = { name: "", email: "", password: "", errorMessage: null }
-  const [state, setState] = useState(initialState)
+  initialState = { name: "", email: "", password: "", errorMessage: null };
+  const [state, setState] = useState(initialState);
 
   const handleSignUp = () => {
     firebase
@@ -19,14 +20,17 @@ export default RegisterScreen = (props) => {
       .createUserWithEmailAndPassword(state.email, state.password)
       .then((userCredentials) => {
         return userCredentials.user.updateProfile({
-          displayName: state.name
+          displayName: state.name,
         });
       })
-      .catch((error) => setState({...state, errorMessage: error.message }));
+      .catch((error) => setState({ ...state, errorMessage: error.message }));
   };
 
-    return (
-      <ImageBackground source={require('../123125.jpg')} style={styles.container}>
+  return (
+    <ImageBackground
+      source={require("../assets/123125.jpg")}
+      style={styles.container}
+    >
       <View style={styles.container}>
         <Text style={styles.greeting}> Create your account </Text>
         <View style={styles.errorMessage}>
@@ -40,7 +44,7 @@ export default RegisterScreen = (props) => {
             <TextInput
               style={styles.input}
               autoCapitalize="none"
-              onChangeText={(name) => setState({...state, name })}
+              onChangeText={(name) => setState({ ...state, name })}
               value={state.name}
             ></TextInput>
           </View>
@@ -75,9 +79,9 @@ export default RegisterScreen = (props) => {
           </Text>
         </TouchableOpacity>
       </View>
-      </ImageBackground>
-    );
-}
+    </ImageBackground>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -90,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "400",
     textAlign: "center",
-    color: "#e98a2f"
+    color: "#e98a2f",
   },
   errorMessage: {
     height: 72,

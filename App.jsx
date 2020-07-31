@@ -5,8 +5,11 @@ import RegisterScreen from "./fireScreens/RegisterScreen";
 import HomeScreen from "./fireScreens/HomeScreen";
 import LoginScreen from "./fireScreens/LoginScreen";
 import App from "./Application";
+import dotenv from "dotenv";
 
 import * as firebase from "firebase";
+
+dotenv.config();
 
 var firebaseConfig = {
   apiKey: "AIzaSyDv-IaTVlmdj8e2eH5bkEmJU8YP2dB79JA",
@@ -21,7 +24,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const AppStack = createStackNavigator({
-  ['F-TIME']: App,
+  ["F-TIME"]: App,
 });
 
 const AuthStack = createStackNavigator({
