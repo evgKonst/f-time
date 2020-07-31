@@ -61,7 +61,7 @@
 </ul>
 
 <hr>
-<h4> <strong> Скриншоты Jobble </strong></h4>
+<h4> <strong> Скриншоты f-time </strong></h4>
 
 <p align="center">
   <img src="screenshots/2.png" width="150" alt="Register page">
